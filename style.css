@@ -1,0 +1,255 @@
+:root {
+    --dark-blue: #0A1A2F;
+    --light-blue: #5FA8FF;
+    --white: #ffffff;
+    --gold: #C1A875;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--dark-blue);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 3px solid var(--light-blue);
+    margin-bottom: 10px;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--dark-blue);
+}
+
+nav .active {
+    color: var(--gold);
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    background-image: url('img/hero-office.jpg'); /* Replace with your interior image */
+    background-size: cover;
+    background-position: center;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 26, 47, 0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 26px;
+    border-radius: 4px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+.btn-secondary {
+    border: 2px solid var(--light-blue);
+    color: var(--white);
+}
+
+/* INTRO */
+.intro {
+    padding: 45px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+/* TITLES */
+.page-title {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.page-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+/* SERVICES GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    padding: 40px;
+    text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.service-card h3 {
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* GALLERY */
+.gallery-grid {
+    padding: 35px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* LIGHTBOX */
+#lightbox {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+#lightbox.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#lightbox img {
+    max-width: 92%;
+    max-height: 92%;
+    border-radius: 6px;
+}
+
+#close-lightbox {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 42px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ABOUT & CONTACT */
+.about-wrapper,
+.contact-wrapper {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 18px;
+    text-align: center;
+}
+
+.contact-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+.contact-info {
+    margin-top: 26px;
+}
+
+/* FOOTER */
+footer {
+    padding: 35px 10px;
+    text-align: center;
+    font-size: 14px;
+    background: var(--dark-blue);
+    color: var(--white);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25D366;
+    padding: 12px 20px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 999;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px) {
+    .hero h1 { font-size: 30px; }
+    .hero p { font-size: 15px; }
+  }
