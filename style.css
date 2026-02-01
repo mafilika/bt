@@ -51,7 +51,7 @@ nav .active {
 /* HERO */
 .hero {
     position: relative;
-    background-image: url('img/hero-office.jpg'); /* Replace with your interior image */
+    background-image: url('https://images.ctfassets.net/09muo917z9ra/45ba9BVZSnqVOZ5htn52Z8/a659cf603954cd05e3ba246337cd21e1/FB_IMG_1769279998945.jpg'); /* Replace with your interior image */
     background-size: cover;
     background-position: center;
     height: 520px;
